@@ -1,2 +1,9 @@
-# meta-rl
-MSc Thesis - Meta Learning the Step Size in Policy Gradient Methods
+## Meta Learning the Step Size in Policy Gradient Methods
+
+### Abstract
+
+Over the last years, Reinforcement Learning (RL) research has achieved astonishing results in many areas, ranging from robotics and autonomous driving to complex games such as Go and Poker. In an RL task, an agent interacts with an environment by observing a representation of its state, performing an action, and receiving a numeric reward in return. The goal is to identify a strategy, also known as policy, that maximizes the cumulative reward obtained over a certain time horizon.
+
+Among the various RL algorithms, this thesis focuses on Policy Gradient methods, which optimize the policy by means of iterative Gradient Ascent (GA) updates. These approaches, while praised for their convergence properties and strong theoretical groundings, require precise and problem-specific hyperparameter tuning to achieve good performance. As a consequence, they tend to struggle when asked to accomplish a series of heterogeneous tasks.
+
+To solve these issues, this thesis adopts a Meta Reinforcement Learning (Meta-RL) approach. Meta-RL aims to create models that can learn quickly and adapt to unseen RL settings. In our work, we introduce a formulation to solve Meta-RL tasks, known as meta-MDP, and we propose an algorithm to solve meta-MDPs with PG learners. In these cases, the "meta" action reduces to the choice of the step size of each GA iteration. The idea of the approach is to apply a batch mode, value-based algorithm, known as Fitted Q Iteration (FQI), to derive an estimate of the expected model improvements and to dynamically recommend the most adequate step size in the current scenario. We conclude our work by evaluating the approach in different settings and reflecting on open questions and future improvements.
